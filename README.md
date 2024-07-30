@@ -3,14 +3,14 @@
 
 ## Контекст
 
-Платформа: 1С:Предприятие 8.3 (8.3.23.2157)
-Конфигурация: Демонстрационная конфигурация ["Библиотека стандартных подсистем", редакция 3.1 (3.1.10.248)](http://v8.1c.ru/ssl)
-Редактирование кода: [VSCode](https://code.visualstudio.com/)
-Инструмент автоматизации для специалистов по 1С: [OneScript](https://oscript.io/)
-утилита автоматизации базовых операций разработчика 1С: [Vanessa-runner](https://github.com/vanessa-opensource/vanessa-runner)
-BDD в 1С: [Vanessa-automation](https://github.com/Pr-Mex/vanessa-automation)
-Архив java: [JDK](https://jdk.java.net/archive/)
-Архиватор: [7zip](https://7-zip.org/download.html)
+- Платформа: 1С:Предприятие 8.3 (8.3.23.2157)
+- Конфигурация: Демонстрационная конфигурация ["Библиотека стандартных подсистем", редакция 3.1 (3.1.10.248)](http://v8.1c.ru/ssl)
+- Редактирование кода: [VSCode](https://code.visualstudio.com/)
+- Инструмент автоматизации для специалистов по 1С: [OneScript](https://oscript.io/)
+- утилита автоматизации базовых операций разработчика 1С: [Vanessa-runner](https://github.com/vanessa-opensource/vanessa-runner)
+- BDD в 1С: [Vanessa-automation](https://github.com/Pr-Mex/vanessa-automation)
+- Архив java: [JDK](https://jdk.java.net/archive/)
+- Архиватор: [7zip](https://7-zip.org/download.html)
 
 ## Необходимо
 
