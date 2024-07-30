@@ -1,0 +1,11 @@
+.env
+build/
+allure-report/
+example/
+tools/allure-2.30.0
+
+ConfigDumpInfo.xml
+build
+out
+.scannerwork
+allure-2.30.0.zip
