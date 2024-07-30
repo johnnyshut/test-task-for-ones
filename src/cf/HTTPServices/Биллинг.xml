@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<HTTPService uuid="db821e7a-ff22-4889-b166-1a1bc1118587">
+		<Properties>
+			<Name>Биллинг</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Биллинг</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<RootURL>billing</RootURL>
+			<ReuseSessions>AutoUse</ReuseSessions>
+			<SessionMaxAge>20</SessionMaxAge>
+		</Properties>
+		<ChildObjects>
+			<URLTemplate uuid="bbd4d7c8-2488-474c-b92c-8f689a56e62e">
+				<Properties>
+					<Name>Версия</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Версия</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/version</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="f909d950-4db8-490c-aaf6-7a2e975a310d">
+						<Properties>
+							<Name>Получить</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Получить</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>ВерсияПолучить</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="0696a18a-99b4-4f95-ab71-5cfb9c107b74">
+				<Properties>
+					<Name>СчетНаОплату</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счет на оплату</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/bill/{Версия}/*</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="9a5ba47b-8383-471c-a759-5a152d4db574">
+						<Properties>
+							<Name>Добавить</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Добавить</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>СчетНаОплатуДобавить</Handler>
+						</Properties>
+					</Method>
+					<Method uuid="31bc76d8-d2ee-40e9-8cd2-24e174fb04a4">
+						<Properties>
+							<Name>Изменить</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Изменить</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>PUT</HTTPMethod>
+							<Handler>СчетНаОплатуИзменить</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="2d07a3e8-46fc-421b-a8b0-a7809e871cfd">
+				<Properties>
+					<Name>УстановитьНастройки</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Установить настройки</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/setup</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="fc3bd079-6491-436c-bb0d-7da15c511e1a">
+						<Properties>
+							<Name>Добавить</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Добавить</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>УстановитьНастройкиДобавить</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="b4c0397c-174c-4e59-aeef-5a8fa5bf18bd">
+				<Properties>
+					<Name>УдалитьНастройки</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Удалить настройки</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/uninstall</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="31fe5e93-5413-4956-82c4-d69274fb078c">
+						<Properties>
+							<Name>Добавить</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Добавить</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>УдалитьНастройкиДобавить</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="91584f81-4e1d-45b3-8b4e-6f0c04e5aba5">
+				<Properties>
+					<Name>СостояниеУстановкиУдаленияНастроек</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние установки удаления настроек</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/setup_result/{ИдентификаторЗадания}</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="44d99658-c0ed-4cc0-848a-a1314e7948cd">
+						<Properties>
+							<Name>Получить</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Получить</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>СостояниеУстановкиУдаленияНастроекПолучить</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+		</ChildObjects>
+	</HTTPService>
+</MetaDataObject>

@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНастройкиАвторизации1СФреш" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авторизация в облачном сервисе</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаНастройкиАвторизации1СФрешРасширеннаяПодсказка" id="13"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаГруппаНастройкиАвторизации1СФрешПояснение" id="48">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа группа настройки авторизации1 с фреш пояснение</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа группа настройки авторизации1 с фреш пояснение</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalSpacing>Half</HorizontalSpacing>
+					<Behavior>Usual</Behavior>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаГруппаНастройкиАвторизации1СФрешПояснениеРасширеннаяПодсказка" id="49"/>
+					<ChildItems>
+						<PictureDecoration name="НастройкиАвторизации1СФрешКартинка" id="50">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки авторизации1 с фреш картинка</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>StdPicture.Information</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="НастройкиАвторизации1СФрешКартинкаКонтекстноеМеню" id="51"/>
+							<ExtendedTooltip name="НастройкиАвторизации1СФрешКартинкаРасширеннаяПодсказка" id="52"/>
+						</PictureDecoration>
+						<LabelDecoration name="НастройкиАвторизации1СФрешПояснение" id="53">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Требуется для общего доступа к API облачного сервиса.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НастройкиАвторизации1СФрешПояснениеКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="НастройкиАвторизации1СФрешПояснениеРасширеннаяПодсказка" id="55"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="АдресСервиса1СФреш" id="1">
+					<DataPath>НаборКонстант.АдресСервиса1СФреш</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адрес</v8:content>
+						</v8:item>
+					</Title>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Например: https://1cfresh.com/a/adm</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="АдресСервиса1СФрешКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="АдресСервиса1СФрешРасширеннаяПодсказка" id="3"/>
+					<Events>
+						<Event name="OnChange">АдресСервиса1СФрешПриИзменении</Event>
+					</Events>
+				</InputField>
+				<UsualGroup name="ГруппаДанныеАвторизации" id="46">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа данные авторизации</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа данные авторизации</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДанныеАвторизацииРасширеннаяПодсказка" id="47"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияВход" id="43">
+							<Width>4</Width>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вход:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияВходКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="ДекорацияВходРасширеннаяПодсказка" id="45"/>
+						</LabelDecoration>
+						<Button name="УстановитьДанныеАвторизации" id="41">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.УстановитьДанныеАвторизации</CommandName>
+							<ExtendedTooltip name="УстановитьДанныеАвторизацииРасширеннаяПодсказка" id="42"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНастройкиОплатыСервиса" id="71">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа1</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНастройкиОплатыСервисаРасширеннаяПодсказка" id="72"/>
+			<ChildItems>
+				<CheckBoxField name="ИспользоватьОплатуСервиса" id="64">
+					<DataPath>НаборКонстант.ИспользоватьОплатуСервиса</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользоватьОплатуСервисаКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="ИспользоватьОплатуСервисаРасширеннаяПодсказка" id="66"/>
+					<Events>
+						<Event name="OnChange">ИспользоватьОплатуСервисаПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<Button name="НастройкиОплатыСервиса" id="69">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.НастройкиОплатыСервиса</CommandName>
+					<ExtendedTooltip name="НастройкиОплатыСервисаРасширеннаяПодсказка" id="70"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ПарольПользователя1СФреш" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль пользователя 1С:Фреш</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НаборКонстант" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Набор констант</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="АвторизацияУстановлена" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авторизация установлена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗагрузитьТарифыСервиса" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить тарифы сервиса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузка тарифов сервиса в данные приложения.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьТарифыСервиса</Action>
+		</Command>
+		<Command name="УстановитьДанныеАвторизации" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить данные авторизации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить данные авторизации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьДанныеАвторизации</Action>
+		</Command>
+		<Command name="НастройкиОплатыСервиса" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки оплаты</v8:content>
+				</v8:item>
+			</Title>
+			<Action>НастройкиОплатыСервиса</Action>
+		</Command>
+	</Commands>
+</Form>

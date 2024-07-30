@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаАвторизацияУчетнойСистемыБиллинга" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авторизация в учетной системе биллинга</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ThroughAlign>Use</ThroughAlign>
+			<ExtendedTooltip name="ГруппаАвторизацияУчетнойСистемыБиллингаРасширеннаяПодсказка" id="24"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаАвторизацияУчетнойСистемыБиллингаПояснение" id="56">
+					<HorizontalSpacing>Half</HorizontalSpacing>
+					<Behavior>Usual</Behavior>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаАвторизацияУчетнойСистемыБиллингаПояснениеРасширеннаяПодсказка" id="57"/>
+					<ChildItems>
+						<PictureDecoration name="АвторизацияУчетнойСистемыБиллингаПояснениеКартинка" id="58">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Авторизация учетной системы биллинга пояснение картинка</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>StdPicture.Information</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="АвторизацияУчетнойСистемыБиллингаПояснениеКартинкаКонтекстноеМеню" id="59"/>
+							<ExtendedTooltip name="АвторизацияУчетнойСистемыБиллингаПояснениеКартинкаРасширеннаяПодсказка" id="60"/>
+						</PictureDecoration>
+						<LabelDecoration name="АвторизацияУчетнойСистемыБиллингаПояснение" id="61">
+							<Width>45</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Требуется для отправки данных в сервис при оформлении счетов на оплату. Настройки должны соответствовать настройке учетной системы биллинга в менеджере сервиса.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="АвторизацияУчетнойСистемыБиллингаПояснениеКонтекстноеМеню" id="62"/>
+							<ExtendedTooltip name="АвторизацияУчетнойСистемыБиллингаПояснениеРасширеннаяПодсказка" id="63"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаЛогинПарольУчетнойСистемы" id="31">
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>Use</ThroughAlign>
+					<ExtendedTooltip name="ГруппаЛогинПарольУчетнойСистемыРасширеннаяПодсказка" id="32"/>
+					<ChildItems>
+						<InputField name="ИмяПользователяУчетнойСистемы" id="25">
+							<DataPath>НаборКонстант.ИмяПользователяУчетнойСистемы</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Логин</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>17</MaxWidth>
+							<ContextMenu name="ИмяПользователяУчетнойСистемыКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ИмяПользователяУчетнойСистемыРасширеннаяПодсказка" id="27"/>
+							<Events>
+								<Event name="OnChange">ИмяПользователяУчетнойСистемыПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ПарольПользователяУчетнойСистеимы" id="28">
+							<DataPath>ПарольПользователяУчетнойСистемы</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пароль</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>16</MaxWidth>
+							<PasswordMode>true</PasswordMode>
+							<ContextMenu name="ПарольПользователяУчетнойСистеимыКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ПарольПользователяУчетнойСистеимыРасширеннаяПодсказка" id="30"/>
+							<Events>
+								<Event name="OnChange">ПарольПользователяУчетнойСистеимыПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСервис" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сервисные возможности</v8:content>
+				</v8:item>
+			</Title>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаСервисРасширеннаяПодсказка" id="34"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЗагрузкаТарифов" id="19">
+					<EnableContentChange>true</EnableContentChange>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа загрузка тарифов</v8:content>
+						</v8:item>
+					</Title>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЗагрузкаТарифовРасширеннаяПодсказка" id="20"/>
+					<ChildItems>
+						<PictureDecoration name="ДекорацияИнформация" id="38">
+							<Picture>
+								<xr:Ref>StdPicture.Information</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="ДекорацияИнформацияКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="ДекорацияИнформацияРасширеннаяПодсказка" id="40"/>
+						</PictureDecoration>
+						<LabelDecoration name="ДекорацияЗагрузитьТарифы" id="35">
+							<Width>29</Width>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Для загрузки тарифов сервиса в данные приложения, воспользуйтесь кнопкой:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияЗагрузитьТарифыКонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="ДекорацияЗагрузитьТарифыРасширеннаяПодсказка" id="37"/>
+						</LabelDecoration>
+						<Button name="ЗагрузитьТарифыСервиса" id="21">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗагрузитьТарифыСервиса</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Загрузить тарифы</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ЗагрузитьТарифыСервисаРасширеннаяПодсказка" id="22"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ПарольПользователя1СФреш" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль пользователя 1С:Фреш</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НаборКонстант" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Набор констант</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПарольПользователяУчетнойСистемы" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль пользователя учетной системы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АвторизацияУстановлена" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авторизация установлена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗагрузитьТарифыСервиса" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить тарифы сервиса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузка тарифов сервиса в данные приложения.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьТарифыСервиса</Action>
+		</Command>
+	</Commands>
+</Form>

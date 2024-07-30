@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаОткрытьФормуВходаВОбласть" id="42">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОткрытьФормуВходаВОбласть</CommandName>
+				<ExtendedTooltip name="ФормаОткрытьФормуВходаВОбластьРасширеннаяПодсказка" id="43"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>false</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<ButtonGroup name="ВходВыходИзОбласти" id="66">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Список контекстное меню группа1</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ВходВыходИзОбластиРасширеннаяПодсказка" id="67"/>
+						<ChildItems>
+							<Button name="СписокКонтекстноеМенюВойтиВОбласть" id="44">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ВойтиВОбласть</CommandName>
+								<ExtendedTooltip name="СписокКонтекстноеМенюВойтиВОбластьРасширеннаяПодсказка" id="45"/>
+							</Button>
+							<Button name="СписокКонтекстноеМенюВыйтиИзОбласти" id="46">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ВыйтиИзОбласти</CommandName>
+								<ExtendedTooltip name="СписокКонтекстноеМенюВыйтиИзОбластиРасширеннаяПодсказка" id="47"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<ButtonGroup name="ОсновныеКомандыСпискаВКонтекстномМеню" id="68">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Список контекстное меню группа1</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ОсновныеКомандыСпискаВКонтекстномМенюРасширеннаяПодсказка" id="69"/>
+						<ChildItems>
+							<Button name="СписокКонтекстноеМенюСоздать" id="48">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Список.StandardCommand.Create</CommandName>
+								<ExtendedTooltip name="СписокКонтекстноеМенюСоздатьРасширеннаяПодсказка" id="49"/>
+							</Button>
+							<Button name="СписокКонтекстноеМенюСкопировать" id="50">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Список.StandardCommand.Copy</CommandName>
+								<ExtendedTooltip name="СписокКонтекстноеМенюСкопироватьРасширеннаяПодсказка" id="51"/>
+							</Button>
+							<Button name="СписокКонтекстноеМенюИзменить" id="52">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Список.StandardCommand.Change</CommandName>
+								<ExtendedTooltip name="СписокКонтекстноеМенюИзменитьРасширеннаяПодсказка" id="53"/>
+							</Button>
+							<Button name="СписокКонтекстноеМенюУдалить" id="54">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Список.StandardCommand.Delete</CommandName>
+								<ExtendedTooltip name="СписокКонтекстноеМенюУдалитьРасширеннаяПодсказка" id="55"/>
+							</Button>
+							<Button name="СписокКонтекстноеМенюПоискПоТекущемуЗначению" id="56">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Список.StandardCommand.FindByCurrentValue</CommandName>
+								<ExtendedTooltip name="СписокКонтекстноеМенюПоискПоТекущемуЗначениюРасширеннаяПодсказка" id="57"/>
+							</Button>
+							<Button name="СписокКонтекстноеМенюНайти" id="58">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Список.StandardCommand.Find</CommandName>
+								<ExtendedTooltip name="СписокКонтекстноеМенюНайтиРасширеннаяПодсказка" id="59"/>
+							</Button>
+							<Button name="СписокКонтекстноеМенюОтменитьПоиск" id="60">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Список.StandardCommand.CancelSearch</CommandName>
+								<ExtendedTooltip name="СписокКонтекстноеМенюОтменитьПоискРасширеннаяПодсказка" id="61"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<Button name="СписокКонтекстноеМенюКопироватьВБуферОбмена" id="62">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Список.StandardCommand.CopyToClipboard</CommandName>
+						<ExtendedTooltip name="СписокКонтекстноеМенюКопироватьВБуферОбменаРасширеннаяПодсказка" id="63"/>
+					</Button>
+					<Button name="СписокКонтекстноеМенюИскатьВезде" id="64">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Список.StandardCommand.SearchEverywhere</CommandName>
+						<ExtendedTooltip name="СписокКонтекстноеМенюИскатьВездеРасширеннаяПодсказка" id="65"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="23"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="24">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="25"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="26"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="27">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<HorizontalLocation>Left</HorizontalLocation>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="28"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="29"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="30">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="31"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="32"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ОбластьДанных" id="4">
+					<DataPath>Список.ОбластьДанныхВспомогательныеДанные</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Область данных</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОбластьДанныхКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ОбластьДанныхРасширеннаяПодсказка" id="33"/>
+				</LabelField>
+				<LabelField name="Представление" id="16">
+					<DataPath>Список.Представление</DataPath>
+					<ContextMenu name="ПредставлениеКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ПредставлениеРасширеннаяПодсказка" id="34"/>
+				</LabelField>
+				<LabelField name="Статус" id="6">
+					<DataPath>Список.Статус</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="СтатусКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="35"/>
+				</LabelField>
+				<LabelField name="Повтор" id="8">
+					<DataPath>Список.Повтор</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ПовторКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ПовторРасширеннаяПодсказка" id="36"/>
+				</LabelField>
+				<LabelField name="ПовторПриАварийномЗавершении" id="70">
+					<DataPath>Список.ПовторПриАварийномЗавершении</DataPath>
+					<ContextMenu name="ПовторПриАварийномЗавершенииКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="ПовторПриАварийномЗавершенииРасширеннаяПодсказка" id="72"/>
+				</LabelField>
+				<CheckBoxField name="ОшибкаОбработки" id="12">
+					<DataPath>Список.ОшибкаОбработки</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОшибкаОбработкиКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ОшибкаОбработкиРасширеннаяПодсказка" id="37"/>
+				</CheckBoxField>
+				<LabelField name="ЧасовойПояс" id="19">
+					<DataPath>Список.ЧасовойПояс</DataPath>
+					<ContextMenu name="ЧасовойПоясКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ЧасовойПоясРасширеннаяПодсказка" id="38"/>
+				</LabelField>
+				<LabelField name="Префикс" id="21">
+					<DataPath>Список.Префикс</DataPath>
+					<ContextMenu name="ПрефиксКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="ПрефиксРасширеннаяПодсказка" id="39"/>
+				</LabelField>
+				<LabelField name="ИдентификаторВыгрузки" id="10">
+					<DataPath>Список.ИдентификаторВыгрузки</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ИдентификаторВыгрузкиКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ИдентификаторВыгрузкиРасширеннаяПодсказка" id="40"/>
+				</LabelField>
+				<LabelField name="Вариант" id="14">
+					<DataPath>Список.Вариант</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ВариантКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ВариантРасширеннаяПодсказка" id="41"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.ОбластьДанныхВспомогательныеДанные</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	РегистрСведенийОбластиДанных.ОбластьДанныхВспомогательныеДанные КАК ОбластьДанныхВспомогательныеДанные,
+	РегистрСведенийОбластиДанных.Статус КАК Статус,
+	РегистрСведенийОбластиДанных.Повтор КАК Повтор,
+	РегистрСведенийОбластиДанных.ПовторПриАварийномЗавершении КАК ПовторПриАварийномЗавершении,
+	РегистрСведенийОбластиДанных.ИдентификаторВыгрузки КАК ИдентификаторВыгрузки,
+	РегистрСведенийОбластиДанных.ОшибкаОбработки КАК ОшибкаОбработки,
+	РегистрСведенийОбластиДанных.Вариант КАК Вариант,
+	ПредставлениеОбластиДанных.Значение КАК Представление,
+	ЧасовойПоясОбластиДанных.Значение КАК ЧасовойПояс,
+	ПрефиксОбластиДанных.Значение КАК Префикс
+ИЗ
+	РегистрСведений.ОбластиДанных КАК РегистрСведенийОбластиДанных
+		ЛЕВОЕ СОЕДИНЕНИЕ Константа.ПредставлениеОбластиДанных КАК ПредставлениеОбластиДанных
+		ПО РегистрСведенийОбластиДанных.ОбластьДанныхВспомогательныеДанные = ПредставлениеОбластиДанных.ОбластьДанныхВспомогательныеДанные
+		ЛЕВОЕ СОЕДИНЕНИЕ Константа.ЧасовойПоясОбластиДанных КАК ЧасовойПоясОбластиДанных
+		ПО РегистрСведенийОбластиДанных.ОбластьДанныхВспомогательныеДанные = ЧасовойПоясОбластиДанных.ОбластьДанныхВспомогательныеДанные
+		ЛЕВОЕ СОЕДИНЕНИЕ Константа.ПрефиксОбластиДанных КАК ПрефиксОбластиДанных
+		ПО РегистрСведенийОбластиДанных.ОбластьДанныхВспомогательныеДанные = ПрефиксОбластиДанных.ОбластьДанныхВспомогательныеДанные</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЧасовойПояс</dcssch:dataPath>
+					<dcssch:field>ЧасовойПояс</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Часовой пояс</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПовторПриАварийномЗавершении</dcssch:dataPath>
+					<dcssch:field>ПовторПриАварийномЗавершении</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Статус</dcssch:dataPath>
+					<dcssch:field>Статус</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОбластьДанныхВспомогательныеДанные</dcssch:dataPath>
+					<dcssch:field>ОбластьДанныхВспомогательныеДанные</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Представление</dcssch:dataPath>
+					<dcssch:field>Представление</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОшибкаОбработки</dcssch:dataPath>
+					<dcssch:field>ОшибкаОбработки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Повтор</dcssch:dataPath>
+					<dcssch:field>Повтор</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИдентификаторВыгрузки</dcssch:dataPath>
+					<dcssch:field>ИдентификаторВыгрузки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Вариант</dcssch:dataPath>
+					<dcssch:field>Вариант</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Префикс</dcssch:dataPath>
+					<dcssch:field>Префикс</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Префикс</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<MainTable>InformationRegister.ОбластиДанных</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОткрытьФормуВходаВОбласть" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вход / выход из области данных</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОткрытьФормуВходаВОбласть</Action>
+		</Command>
+		<Command name="ВойтиВОбласть" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Войти в область</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>Ctrl+E</Shortcut>
+			<Action>ВойтиВОбласть</Action>
+		</Command>
+		<Command name="ВыйтиИзОбласти" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выйти из области</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>Alt+E</Shortcut>
+			<Action>ВыйтиИзОбласти</Action>
+		</Command>
+	</Commands>
+</Form>

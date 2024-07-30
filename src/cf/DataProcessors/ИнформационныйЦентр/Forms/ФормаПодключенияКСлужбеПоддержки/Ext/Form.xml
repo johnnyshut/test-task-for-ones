@@ -1,0 +1,786 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницы" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="35"/>
+			<ChildItems>
+				<Page name="СтраницаВводДанных" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница ввод данных</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница ввод данных</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаВводДанныхРасширеннаяПодсказка" id="37"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияИнформация" id="11">
+							<Font ref="style:NormalTextFont" bold="false" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Информационная база не подключена к службе поддержки.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияИнформацияКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ДекорацияИнформацияРасширеннаяПодсказка" id="13"/>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияНадписьПодключитьБазу" id="62">
+							<Width>33</Width>
+							<Font ref="style:LargeTextFont" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подключить базу</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияНадписьПодключитьБазуКонтекстноеМеню" id="63"/>
+							<ExtendedTooltip name="ДекорацияНадписьПодключитьБазуРасширеннаяПодсказка" id="64"/>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияНадписьПриПомощиКода" id="106">
+							<Width>33</Width>
+							<Font ref="style:LargeTextFont" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>при помощи кода регистрации:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияНадписьПриПомощиКодаКонтекстноеМеню" id="107"/>
+							<ExtendedTooltip name="ДекорацияНадписьПриПомощиКодаРасширеннаяПодсказка" id="108"/>
+						</LabelDecoration>
+						<InputField name="АдресУСП" id="14">
+							<DataPath>АдресУСП</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Адрес службы поддержки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Адрес внешнего анонимного интерфейса службы поддержки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>http://server/base/hs/ext_sd</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="АдресУСПКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="АдресУСПРасширеннаяПодсказка" id="16"/>
+						</InputField>
+						<InputField name="Email" id="1">
+							<DataPath>Email</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>E-mail пользователя</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>E-mail пользователя. В базе службы поддержки должен быть пользователь сервиса с таким адресом. У текущего пользователя этой базы также должен быть заполнен указан этот e-mail.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ContextMenu name="EmailКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="EmailРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<InputField name="КодРегистрации" id="4">
+							<DataPath>КодРегистрации</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Если у вас нет кода регистрации, перейдите на страницу регистрации по ссылке ниже.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ContextMenu name="КодРегистрацииКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="КодРегистрацииРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<UsualGroup name="ГруппаСостояниеПодключения" id="45">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа состояние подключения</v8:content>
+								</v8:item>
+							</Title>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСостояниеПодключенияРасширеннаяПодсказка" id="46"/>
+							<ChildItems>
+								<PictureDecoration name="ЗначокСостояниеПодключения" id="47">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Значок состояние подключения</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ЗначокСостояниеПодключенияКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="ЗначокСостояниеПодключенияРасширеннаяПодсказка" id="49"/>
+								</PictureDecoration>
+								<LabelDecoration name="НадписьСостояниеПодключения" id="50">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Определение статуса подключения...</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьСостояниеПодключенияКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="НадписьСостояниеПодключенияРасширеннаяПодсказка" id="52"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<Button name="ВвестиКодРегистрации" id="9">
+							<Type>UsualButton</Type>
+							<Width>33</Width>
+							<Height>1</Height>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<CommandName>Form.Command.ВвестиКодРегистрации</CommandName>
+							<Font ref="style:LargeTextFont" kind="StyleItem"/>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ввести код регистрации</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<ExtendedTooltip name="ВвестиКодРегистрацииРасширеннаяПодсказка" id="10"/>
+						</Button>
+						<Button name="ПерейтиНаСтраницуРегистрации" id="7">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ПерейтиНаСтраницуРегистрации</CommandName>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<ExtendedTooltip name="ПерейтиНаСтраницуРегистрацииРасширеннаяПодсказка" id="8"/>
+						</Button>
+						<Button name="ОтменитьПодключение" id="53">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ОтменитьПодключение</CommandName>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<ExtendedTooltip name="ОтменитьПодключениеРасширеннаяПодсказка" id="54"/>
+						</Button>
+						<UsualGroup name="ГруппаРазделитель" id="101">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа разделитель абоненты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>33</Width>
+							<Height>3</Height>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРазделительРасширеннаяПодсказка" id="102"/>
+							<ChildItems>
+								<LabelDecoration name="РазделительАбоненты" id="103">
+									<TextColor>style:ПоясняющийТекст</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>––––––––––––––––––––  или  –––––––––––––––––––––</v8:content>
+										</v8:item>
+									</Title>
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="РазделительАбонентыКонтекстноеМеню" id="104"/>
+									<ExtendedTooltip name="РазделительАбонентыРасширеннаяПодсказка" id="105"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаВводТокенаДляПодключения" id="55">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ввод токена для подключения</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ввод токена для подключения</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВводТокенаДляПодключенияРасширеннаяПодсказка" id="56"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияПриПомощиТокена" id="65">
+									<Font ref="style:LargeTextFont" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>при помощи токена для регистрации:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияПриПомощиТокенаКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="ДекорацияПриПомощиТокенаРасширеннаяПодсказка" id="67"/>
+								</LabelDecoration>
+								<InputField name="ТокенДляРегистрации" id="57">
+									<DataPath>ТокенДляРегистрации</DataPath>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MultiLine>true</MultiLine>
+									<ContextMenu name="ТокенДляРегистрацииКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="ТокенДляРегистрацииРасширеннаяПодсказка" id="59">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Токен для регистрации можно получить в письме - приглашении для регистрации, отправленном из службы поддержки.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</InputField>
+								<Button name="ВвестиТокенДляРегистрации" id="60">
+									<Type>UsualButton</Type>
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+									<CommandName>Form.Command.ВвестиТокенДляРегистрации</CommandName>
+									<Font ref="style:LargeTextFont" kind="StyleItem"/>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ввести токен</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ВвестиТокенДляРегистрацииРасширеннаяПодсказка" id="61"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<Button name="ПерейтиНаСтраницуЗапросаКодовПользователей" id="99">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ПерейтиНаСтраницуЗапросаКодовПользователей</CommandName>
+							<ExtendedTooltip name="ПерейтиНаСтраницуЗапросаКодовПользователейРасширеннаяПодсказка" id="100"/>
+						</Button>
+						<LabelDecoration name="ДекорацияНеЗаполненEmailПользователя" id="112">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Требуется заполнить Email пользователя (в справочнике "Пользователи").</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияНеЗаполненEmailПользователяКонтекстноеМеню" id="113"/>
+							<ExtendedTooltip name="ДекорацияНеЗаполненEmailПользователяРасширеннаяПодсказка" id="114"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаУспешноеПодключение" id="38">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница успешное подключение</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница успешное подключение</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаУспешноеПодключениеРасширеннаяПодсказка" id="39"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияУспешноеПодключение" id="40">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Информационная база подключена к службе поддержки.
+На адрес [Email] отправлен код для работы с обращениями.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияУспешноеПодключениеКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="ДекорацияУспешноеПодключениеРасширеннаяПодсказка" id="42"/>
+						</LabelDecoration>
+						<Button name="ПерейтиКОбращениям" id="43">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ПерейтиКОбращениям</CommandName>
+							<ExtendedTooltip name="ПерейтиКОбращениямРасширеннаяПодсказка" id="44"/>
+						</Button>
+						<LabelDecoration name="ДекорацияНадписьДругиеПользователи" id="94">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Если другие пользователи информационной базы будут работать с обращениями, им также понадобится код для работы с обращениями.
+
+Пользователи могут запросить этот код самостоятельно. Также запросить код для пользователей можно по следующей ссылке:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияНадписьДругиеПользователиКонтекстноеМеню" id="95"/>
+							<ExtendedTooltip name="ДекорацияНадписьДругиеПользователиРасширеннаяПодсказка" id="96"/>
+						</LabelDecoration>
+						<Button name="ЗапроситьКодыДляПользователей" id="92">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ПерейтиНаСтраницуЗапросаКодовПользователей</CommandName>
+							<ExtendedTooltip name="ЗапроситьКодыДляПользователейРасширеннаяПодсказка" id="93"/>
+						</Button>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаЗапроситьКодПользователей" id="68">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница запросить код пользователей</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница запросить код пользователей</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаЗапроситьКодПользователейРасширеннаяПодсказка" id="69"/>
+					<ChildItems>
+						<LabelDecoration name="ЗаголовокЗапроситьКоды" id="109">
+							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Запросить коды для работы с обращениями:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ЗаголовокЗапроситьКодыКонтекстноеМеню" id="110"/>
+							<ExtendedTooltip name="ЗаголовокЗапроситьКодыРасширеннаяПодсказка" id="111"/>
+						</LabelDecoration>
+						<Table name="ПользователиДляЗапросаКодов" id="70">
+							<Representation>List</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ПользователиДляЗапросаКодов</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПользователиДляЗапросаКодовКонтекстноеМеню" id="71"/>
+							<AutoCommandBar name="ПользователиДляЗапросаКодовКоманднаяПанель" id="72"/>
+							<ExtendedTooltip name="ПользователиДляЗапросаКодовРасширеннаяПодсказка" id="73"/>
+							<SearchStringAddition name="ПользователиДляЗапросаКодовСтрокаПоиска" id="74">
+								<AdditionSource>
+									<Item>ПользователиДляЗапросаКодов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПользователиДляЗапросаКодовСтрокаПоискаКонтекстноеМеню" id="75"/>
+								<ExtendedTooltip name="ПользователиДляЗапросаКодовСтрокаПоискаРасширеннаяПодсказка" id="76"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПользователиДляЗапросаКодовСостояниеПросмотра" id="77">
+								<AdditionSource>
+									<Item>ПользователиДляЗапросаКодов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПользователиДляЗапросаКодовСостояниеПросмотраКонтекстноеМеню" id="78"/>
+								<ExtendedTooltip name="ПользователиДляЗапросаКодовСостояниеПросмотраРасширеннаяПодсказка" id="79"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПользователиДляЗапросаКодовУправлениеПоиском" id="80">
+								<AdditionSource>
+									<Item>ПользователиДляЗапросаКодов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПользователиДляЗапросаКодовУправлениеПоискомКонтекстноеМеню" id="81"/>
+								<ExtendedTooltip name="ПользователиДляЗапросаКодовУправлениеПоискомРасширеннаяПодсказка" id="82"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<CheckBoxField name="ПользователиДляЗапросаКодовЗапроситьКод" id="89">
+									<DataPath>ПользователиДляЗапросаКодов.ЗапроситьКод</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПользователиДляЗапросаКодовЗапроситьКодКонтекстноеМеню" id="90"/>
+									<ExtendedTooltip name="ПользователиДляЗапросаКодовЗапроситьКодРасширеннаяПодсказка" id="91"/>
+								</CheckBoxField>
+								<InputField name="ПользователиДляЗапросаКодовПользователь" id="83">
+									<DataPath>ПользователиДляЗапросаКодов.Пользователь</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПользователиДляЗапросаКодовПользовательКонтекстноеМеню" id="84"/>
+									<ExtendedTooltip name="ПользователиДляЗапросаКодовПользовательРасширеннаяПодсказка" id="85"/>
+								</InputField>
+								<InputField name="ПользователиДляЗапросаКодовEmail" id="86">
+									<DataPath>ПользователиДляЗапросаКодов.Email</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПользователиДляЗапросаКодовEmailКонтекстноеМеню" id="87"/>
+									<ExtendedTooltip name="ПользователиДляЗапросаКодовEmailРасширеннаяПодсказка" id="88"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<Button name="ЗапроситьКодыПользователей" id="97">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗапроситьКодыПользователей</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отправить запросы</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ЗапроситьКодыПользователейРасширеннаяПодсказка" id="98"/>
+						</Button>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ИнформационныйЦентр</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Email" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Email</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="КодРегистрации" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код регистрации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="АдресУСП" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес УСП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ИмяКонфигурации" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя конфигурации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВерсияКонфигурации" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия конфигурации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВерсияПлатформы" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия платформы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторКлиента" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор клиента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторИБ" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор ИБ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресИнформационногоЦентра" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес информационного центра</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="БазаПодключена" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>База подключена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрыЗадания" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ТокенДляРегистрации" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Токен для регистрации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПользователиДляЗапросаКодов" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователи для запроса кодов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Пользователь" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пользователь</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Email" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Email</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗапроситьКод" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content> </v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПерейтиНаСтраницуРегистрации" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти на страницу регистрации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти на страницу регистрации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПерейтиНаСтраницуРегистрации</Action>
+		</Command>
+		<Command name="ВвестиКодРегистрации" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввести код регистрации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввести код регистрации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВвестиКодРегистрации</Action>
+		</Command>
+		<Command name="ПерейтиКОбращениям" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти к обращениям</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти к обращениям</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПерейтиКОбращениям</Action>
+		</Command>
+		<Command name="ОтменитьПодключение" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить подключение</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОтменитьПодключение</Action>
+		</Command>
+		<Command name="ВвестиТокенДляРегистрации" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввести токен для регистрации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввести токен для регистрации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВвестиТокенДляРегистрации</Action>
+		</Command>
+		<Command name="ПерейтиНаСтраницуЗапросаКодовПользователей" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти на страницу запроса кодов пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти на страницу запроса кодов пользователей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПерейтиНаСтраницуЗапросаКодовПользователей</Action>
+		</Command>
+		<Command name="ЗапроситьКодыПользователей" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запросить коды пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запросить коды пользователей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапроситьКодыПользователей</Action>
+		</Command>
+	</Commands>
+</Form>

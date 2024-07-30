@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаПеренестиФайлы" id="8">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ПеренестиФайлы</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Перенести файлы</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаПеренестиФайлыРасширеннаяПодсказка" id="10"/>
+			</Button>
+			<Button name="ФормаСоздатьФайлыДляПереноса" id="24">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СоздатьФайлыДляПереноса</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Создать файлы для переноса</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаСоздатьФайлыДляПереносаРасширеннаяПодсказка" id="25"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ДокументИлиСправочник" id="1">
+			<DataPath>ДокументИлиСправочник</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ или справочник</v8:content>
+				</v8:item>
+			</Title>
+			<ListChoiceMode>true</ListChoiceMode>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<TextEdit>false</TextEdit>
+			<ContextMenu name="ДокументИлиСправочникКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ДокументИлиСправочникРасширеннаяПодсказка" id="12"/>
+			<Events>
+				<Event name="OnChange">ДокументИлиСправочникПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="НаправлениеПереноса" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Направление переноса</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="НаправлениеПереносаРасширеннаяПодсказка" id="30"/>
+			<ChildItems>
+				<InputField name="Источник" id="31">
+					<DataPath>Источник</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Источник</v8:content>
+						</v8:item>
+					</Title>
+					<ListChoiceMode>true</ListChoiceMode>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="ИсточникКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ИсточникРасширеннаяПодсказка" id="33"/>
+					<Events>
+						<Event name="OnChange">ИсточникПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Приемник" id="34">
+					<DataPath>Приемник</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приемник</v8:content>
+						</v8:item>
+					</Title>
+					<ListChoiceMode>true</ListChoiceMode>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="ПриемникКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ПриемникРасширеннаяПодсказка" id="36"/>
+					<Events>
+						<Event name="OnChange">ПриемникПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ВладельцыПрисоединенныхФайлов" id="3">
+			<Representation>List</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<SelectionMode>SingleRow</SelectionMode>
+			<Header>false</Header>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ВладельцыПрисоединенныхФайлов</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Владельцы присоединенных файлов</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>Top</SearchStringLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ВладельцыПрисоединенныхФайловКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="ВладельцыПрисоединенныхФайловКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ВладельцыПрисоединенныхФайловРасширеннаяПодсказка" id="13"/>
+			<SearchStringAddition name="ВладельцыПрисоединенныхФайловСтрокаПоиска" id="15">
+				<AdditionSource>
+					<Item>ВладельцыПрисоединенныхФайлов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ВладельцыПрисоединенныхФайловСтрокаПоискаКонтекстноеМеню" id="16"/>
+				<ExtendedTooltip name="ВладельцыПрисоединенныхФайловСтрокаПоискаРасширеннаяПодсказка" id="17"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ВладельцыПрисоединенныхФайловСостояниеПросмотра" id="18">
+				<AdditionSource>
+					<Item>ВладельцыПрисоединенныхФайлов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ВладельцыПрисоединенныхФайловСостояниеПросмотраКонтекстноеМеню" id="19"/>
+				<ExtendedTooltip name="ВладельцыПрисоединенныхФайловСостояниеПросмотраРасширеннаяПодсказка" id="20"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ВладельцыПрисоединенныхФайловУправлениеПоиском" id="21">
+				<AdditionSource>
+					<Item>ВладельцыПрисоединенныхФайлов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ВладельцыПрисоединенныхФайловУправлениеПоискомКонтекстноеМеню" id="22"/>
+				<ExtendedTooltip name="ВладельцыПрисоединенныхФайловУправлениеПоискомРасширеннаяПодсказка" id="23"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnActivateCell">ВладельцыПрисоединенныхФайловПриАктивизацииЯчейки</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ТаблицаСсылокСсылка" id="6">
+					<DataPath>ВладельцыПрисоединенныхФайлов.Ссылка</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаСсылокСсылкаКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ТаблицаСсылокСсылкаРасширеннаяПодсказка" id="14"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="ПрисоединенныеФайлы" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Присоединенные файлы</v8:content>
+				</v8:item>
+			</Title>
+			<Height>16</Height>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПрисоединенныеФайлыРасширеннаяПодсказка" id="38"/>
+			<ChildItems>
+				<Table name="ФайлыИсточника" id="39">
+					<TitleLocation>Top</TitleLocation>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<DataPath>ФайлыИсточника</DataPath>
+					<RowPictureDataPath>ФайлыИсточника.DefaultPicture</RowPictureDataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Файлы источника</v8:content>
+						</v8:item>
+					</Title>
+					<CommandSet>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>ChangeHistory</ExcludedCommand>
+						<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+						<ExcludedCommand>DynamicListStandardSettings</ExcludedCommand>
+						<ExcludedCommand>LoadDynamicListSettings</ExcludedCommand>
+						<ExcludedCommand>SaveDynamicListSettings</ExcludedCommand>
+						<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+					</CommandSet>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+					<ContextMenu name="ФайлыИсточникаКонтекстноеМеню" id="40"/>
+					<AutoCommandBar name="ФайлыИсточникаКоманднаяПанель" id="41"/>
+					<ExtendedTooltip name="ФайлыИсточникаРасширеннаяПодсказка" id="42"/>
+					<SearchStringAddition name="ФайлыИсточникаСтрокаПоиска" id="43">
+						<AdditionSource>
+							<Item>ФайлыИсточника</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ФайлыИсточникаСтрокаПоискаКонтекстноеМеню" id="44"/>
+						<ExtendedTooltip name="ФайлыИсточникаСтрокаПоискаРасширеннаяПодсказка" id="45"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ФайлыИсточникаСостояниеПросмотра" id="46">
+						<AdditionSource>
+							<Item>ФайлыИсточника</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ФайлыИсточникаСостояниеПросмотраКонтекстноеМеню" id="47"/>
+						<ExtendedTooltip name="ФайлыИсточникаСостояниеПросмотраРасширеннаяПодсказка" id="48"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ФайлыИсточникаУправлениеПоиском" id="49">
+						<AdditionSource>
+							<Item>ФайлыИсточника</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ФайлыИсточникаУправлениеПоискомКонтекстноеМеню" id="50"/>
+						<ExtendedTooltip name="ФайлыИсточникаУправлениеПоискомРасширеннаяПодсказка" id="51"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="ФайлыИсточникаНаименование" id="52">
+							<DataPath>ФайлыИсточника.Description</DataPath>
+							<ContextMenu name="ФайлыИсточникаНаименованиеКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="ФайлыИсточникаНаименованиеРасширеннаяПодсказка" id="54"/>
+						</LabelField>
+						<LabelField name="ФайлыИсточникаДатаСоздания" id="67">
+							<DataPath>ФайлыИсточника.ДатаСоздания</DataPath>
+							<ContextMenu name="ФайлыИсточникаДатаСозданияКонтекстноеМеню" id="68"/>
+							<ExtendedTooltip name="ФайлыИсточникаДатаСозданияРасширеннаяПодсказка" id="69"/>
+						</LabelField>
+						<LabelField name="ФайлыИсточникаСсылка" id="158">
+							<DataPath>ФайлыИсточника.Ref</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<ContextMenu name="ФайлыИсточникаСсылкаКонтекстноеМеню" id="159"/>
+							<ExtendedTooltip name="ФайлыИсточникаСсылкаРасширеннаяПодсказка" id="160"/>
+						</LabelField>
+					</ChildItems>
+				</Table>
+				<Table name="ФайлыПриемника" id="127">
+					<TitleLocation>Top</TitleLocation>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<DataPath>ФайлыПриемника</DataPath>
+					<RowPictureDataPath>ФайлыПриемника.DefaultPicture</RowPictureDataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Файлы приемника</v8:content>
+						</v8:item>
+					</Title>
+					<CommandSet>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>ChangeHistory</ExcludedCommand>
+						<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+						<ExcludedCommand>DynamicListStandardSettings</ExcludedCommand>
+						<ExcludedCommand>LoadDynamicListSettings</ExcludedCommand>
+						<ExcludedCommand>SaveDynamicListSettings</ExcludedCommand>
+						<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+					</CommandSet>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+					<ContextMenu name="ФайлыПриемникаКонтекстноеМеню" id="128"/>
+					<AutoCommandBar name="ФайлыПриемникаКоманднаяПанель" id="129"/>
+					<ExtendedTooltip name="ФайлыПриемникаРасширеннаяПодсказка" id="130"/>
+					<SearchStringAddition name="ФайлыПриемникаСтрокаПоиска" id="131">
+						<AdditionSource>
+							<Item>ФайлыПриемника</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ФайлыПриемникаСтрокаПоискаКонтекстноеМеню" id="132"/>
+						<ExtendedTooltip name="ФайлыПриемникаСтрокаПоискаРасширеннаяПодсказка" id="133"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ФайлыПриемникаСостояниеПросмотра" id="134">
+						<AdditionSource>
+							<Item>ФайлыПриемника</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ФайлыПриемникаСостояниеПросмотраКонтекстноеМеню" id="135"/>
+						<ExtendedTooltip name="ФайлыПриемникаСостояниеПросмотраРасширеннаяПодсказка" id="136"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ФайлыПриемникаУправлениеПоиском" id="137">
+						<AdditionSource>
+							<Item>ФайлыПриемника</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ФайлыПриемникаУправлениеПоискомКонтекстноеМеню" id="138"/>
+						<ExtendedTooltip name="ФайлыПриемникаУправлениеПоискомРасширеннаяПодсказка" id="139"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="ФайлыПриемникаНаименование" id="140">
+							<DataPath>ФайлыПриемника.Description</DataPath>
+							<ContextMenu name="ФайлыПриемникаНаименованиеКонтекстноеМеню" id="141"/>
+							<ExtendedTooltip name="ФайлыПриемникаНаименованиеРасширеннаяПодсказка" id="142"/>
+						</LabelField>
+						<LabelField name="ФайлыПриемникаДатаСоздания" id="155">
+							<DataPath>ФайлыПриемника.ДатаСоздания</DataPath>
+							<ContextMenu name="ФайлыПриемникаДатаСозданияКонтекстноеМеню" id="156"/>
+							<ExtendedTooltip name="ФайлыПриемникаДатаСозданияРасширеннаяПодсказка" id="157"/>
+						</LabelField>
+						<LabelField name="ФайлыПриемникаСсылка" id="161">
+							<DataPath>ФайлыПриемника.Ref</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<ContextMenu name="ФайлыПриемникаСсылкаКонтекстноеМеню" id="162"/>
+							<ExtendedTooltip name="ФайлыПриемникаСсылкаРасширеннаяПодсказка" id="163"/>
+						</LabelField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject._ДемоПереносПрисоединенныхФайлов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ДокументИлиСправочник" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ или справочник</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВладельцыПрисоединенныхФайлов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Владельцы присоединенных файлов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ссылка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Источник" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Источник</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Приемник" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приемник</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФайлыИсточника" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файлы источника</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.Файлы</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ФайлыПриемника" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файлы приемника</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.Файлы</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПеренестиФайлы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести файлы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести файлы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПеренестиФайлы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СоздатьФайлыДляПереноса" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать файлы для переноса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать файлы для переноса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьФайлыДляПереноса</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

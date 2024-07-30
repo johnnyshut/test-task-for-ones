@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<PictureDecoration name="ДекорацияКартинкаЛоготипПортала" id="246">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Декорация картинка логотип портала</v8:content>
+				</v8:item>
+			</Title>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<Picture>
+				<xr:Ref>CommonPicture.Портала1СИТСЛоготип</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<ContextMenu name="ДекорацияКартинкаЛоготипПорталаКонтекстноеМеню" id="247"/>
+			<ExtendedTooltip name="ДекорацияКартинкаЛоготипПорталаРасширеннаяПодсказка" id="248"/>
+		</PictureDecoration>
+		<LabelDecoration name="ДекорацияНадписьИнтернетПоддержкаПользователей" id="271">
+			<Font ref="style:LargeTextFont" kind="StyleItem"/>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интернет-поддержка пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<ContextMenu name="ДекорацияНадписьИнтернетПоддержкаПользователейКонтекстноеМеню" id="272"/>
+			<ExtendedTooltip name="ДекорацияНадписьИнтернетПоддержкаПользователейРасширеннаяПодсказка" id="273"/>
+		</LabelDecoration>
+		<LabelDecoration name="ДекорацияОтступ" id="268">
+			<Font ref="style:ШрифтМикротекста" kind="StyleItem"/>
+			<ContextMenu name="ДекорацияОтступКонтекстноеМеню" id="269"/>
+			<ExtendedTooltip name="ДекорацияОтступРасширеннаяПодсказка" id="270"/>
+		</LabelDecoration>
+		<LabelDecoration name="ДекорацияНадписьПодключение" id="249">
+			<Width>34</Width>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключитесь к Интернет-поддержке пользователей для работы с &lt;link action:openPortal&gt;сервисами 1С&lt;/&gt;.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияНадписьПодключениеКонтекстноеМеню" id="250"/>
+			<ExtendedTooltip name="ДекорацияНадписьПодключениеРасширеннаяПодсказка" id="251"/>
+			<Events>
+				<Event name="URLProcessing">ДекорацияНадписьПодключениеОбработкаНавигационнойСсылки</Event>
+			</Events>
+		</LabelDecoration>
+		<UsualGroup name="ГруппаЛогинИПароль" id="188">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Логин и пароль</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЛогинИПарольРасширеннаяПодсказка" id="189"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЛогин" id="238">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа логин</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛогинРасширеннаяПодсказка" id="239"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаЛогинЗаголовок" id="252">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа логин заголовок</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЛогинЗаголовокРасширеннаяПодсказка" id="253"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияНадписьЛогин" id="254">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Логин</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияНадписьЛогинКонтекстноеМеню" id="255"/>
+									<ExtendedTooltip name="ДекорацияНадписьЛогинРасширеннаяПодсказка" id="256"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьНетЛогинаИПароляАвторизация" id="32">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Нет логина и пароля?</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<ContextMenu name="НадписьНетЛогинаИПароляАвторизацияКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="НадписьНетЛогинаИПароляАвторизацияРасширеннаяПодсказка" id="168"/>
+									<Events>
+										<Event name="Click">НадписьНетЛогинаИПароляАвторизацияНажатие</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Логин" id="182">
+							<DataPath>Логин</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ЛогинКонтекстноеМеню" id="183"/>
+							<ExtendedTooltip name="ЛогинРасширеннаяПодсказка" id="184"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПароль" id="190">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа пароль</v8:content>
+						</v8:item>
+					</Title>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПарольРасширеннаяПодсказка" id="191"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПарольЗаголовок" id="260">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа пароль заголовок</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПарольЗаголовокРасширеннаяПодсказка" id="261"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияНадписьПароль" id="262">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пароль</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияНадписьПарольКонтекстноеМеню" id="263"/>
+									<ExtendedTooltip name="ДекорацияНадписьПарольРасширеннаяПодсказка" id="264"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьВосстановленияПароляАвторизация" id="29">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Забыли пароль?</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перейти к восстановлению пароля</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Hyperlink>true</Hyperlink>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<ContextMenu name="НадписьВосстановленияПароляАвторизацияКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="НадписьВосстановленияПароляАвторизацияРасширеннаяПодсказка" id="166"/>
+									<Events>
+										<Event name="Click">НадписьВосстановленияПароляАвторизацияНажатие</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Пароль" id="257">
+							<DataPath>Пароль</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<PasswordMode>true</PasswordMode>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ПарольКонтекстноеМеню" id="258"/>
+							<ExtendedTooltip name="ПарольРасширеннаяПодсказка" id="259"/>
+							<Events>
+								<Event name="OnChange">ПарольПриИзменении</Event>
+								<Event name="StartChoice">ПарольНачалоВыбора</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="СохранитьБезПроверки" id="243">
+			<DataPath>СохранитьБезПроверки</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>При сохранении логина и пароля Интернет-поддержки пользователей не будет выполнена их проверка на Портале 1С:ИТС. Перед сохранением важно убедиться в правильности введенных логина и пароля, в противном случае могут возникнуть проблемы при работе с Интерне</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="СохранитьБезПроверкиКонтекстноеМеню" id="244"/>
+			<ExtendedTooltip name="СохранитьБезПроверкиРасширеннаяПодсказка" id="245">
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>При сохранении логина и пароля Интернет-поддержки пользователей не будет выполнена их проверка на Портале 1С:ИТС. Перед сохранением важно убедиться, что логин и пароль указаны правильно, чтобы не возникли проблемы при работе с Интернет-поддержкой, например, при получении обновления программы.</v8:content>
+					</v8:item>
+				</Title>
+			</ExtendedTooltip>
+		</CheckBoxField>
+		<Button name="ФормаКомандаОК" id="199">
+			<Type>UsualButton</Type>
+			<DefaultButton>true</DefaultButton>
+			<Width>24</Width>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<CommandName>Form.Command.Подключить</CommandName>
+			<ExtendedTooltip name="ФормаКомандаОКРасширеннаяПодсказка" id="200"/>
+		</Button>
+		<LabelDecoration name="ДекорацияНадписьТехническаяПоддержка" id="265">
+			<Width>31</Width>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>При возникновении проблем напишите в &lt;link action:openSupport&gt;техническую поддержку&lt;/&gt;.</v8:content>
+				</v8:item>
+			</Title>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<GroupVerticalAlign>Center</GroupVerticalAlign>
+			<HorizontalAlign>Center</HorizontalAlign>
+			<ContextMenu name="ДекорацияНадписьТехническаяПоддержкаКонтекстноеМеню" id="266"/>
+			<ExtendedTooltip name="ДекорацияНадписьТехническаяПоддержкаРасширеннаяПодсказка" id="267"/>
+			<Events>
+				<Event name="URLProcessing">ДекорацияНадписьТехническаяПоддержкаОбработкаНавигационнойСсылки</Event>
+			</Events>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Логин" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Логин</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Пароль" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗапомнитьПароль" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запомнить меня</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрограммноеЗакрытие" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Программное закрытие</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоФормаБизнесПроцесса" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это форма бизнес процесса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимВводаНастроекКлиентаЛицензирования" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим ввода настроек клиента лицензирования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкиСоединенияССерверами" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки соединения с серверами</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="СохранитьБезПроверки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить без проверки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Подключить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Подключить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="РежимВводаНастроекКлиентаЛицензирования">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

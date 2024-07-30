@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Включить установку исправлений (патчей)</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Group>AlwaysHorizontal</Group>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаВключить" id="7">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Включить</CommandName>
+				<ExtendedTooltip name="ФормаВключитьРасширеннаяПодсказка" id="8"/>
+			</Button>
+			<Button name="ФормаНапомнитьПозже" id="9">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.НапомнитьПозже</CommandName>
+				<ExtendedTooltip name="ФормаНапомнитьПозжеРасширеннаяПодсказка" id="10"/>
+			</Button>
+			<Button name="ФормаБольшеНеПоказывать" id="11">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.БольшеНеПоказывать</CommandName>
+				<ExtendedTooltip name="ФормаБольшеНеПоказыватьРасширеннаяПодсказка" id="12"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<PictureDecoration name="КартинкаИнформация" id="4">
+			<Width>5</Width>
+			<Height>2</Height>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Декорация1</v8:content>
+				</v8:item>
+			</Title>
+			<PictureSize>Proportionally</PictureSize>
+			<Picture>
+				<xr:Ref>CommonPicture.ИнтернетПоддержкаВнимание</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<ContextMenu name="КартинкаИнформацияКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="КартинкаИнформацияРасширеннаяПодсказка" id="6"/>
+		</PictureDecoration>
+		<UsualGroup name="ГруппаВертикальная" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа1</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВертикальнаяРасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<LabelDecoration name="НадписьОбратитьсяКАдминистратору" id="15">
+					<Width>52</Width>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обратитесь к администратору системы для включения автоматической установки исправлений.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НадписьОбратитьсяКАдминистраторуКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="НадписьОбратитьсяКАдминистраторуРасширеннаяПодсказка" id="17"/>
+				</LabelDecoration>
+				<LabelDecoration name="НадписьИнформация" id="1">
+					<Width>52</Width>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исправление (патч) позволяет оперативно исправлять ошибки в программе, не дожидаясь следующего исправительного релиза. Установка исправлений (патчей) не требует обязательного завершения сеансов пользователей, работающих с программой, а для применения исправлений достаточно перезапустить программу в удобный момент времени.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НадписьИнформацияКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НадписьИнформацияРасширеннаяПодсказка" id="3"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+	<Commands>
+		<Command name="Включить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Включить</Action>
+		</Command>
+		<Command name="НапомнитьПозже" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Напомнить позже</v8:content>
+				</v8:item>
+			</Title>
+			<Action>НапомнитьПозже</Action>
+		</Command>
+		<Command name="БольшеНеПоказывать" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Больше не показывать</v8:content>
+				</v8:item>
+			</Title>
+			<Action>БольшеНеПоказывать</Action>
+		</Command>
+	</Commands>
+</Form>
